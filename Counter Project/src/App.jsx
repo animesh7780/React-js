@@ -3,12 +3,13 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(15)
+  let [counter, setCounter] = useState(0)
 
   //let counter = 5
 
   const addValue = () => {
     //counter = counter + 1
+    //interview prospective question
     setCounter(counter + 1)
     if(counter >= 20){
       setCounter(0)
