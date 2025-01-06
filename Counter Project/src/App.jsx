@@ -9,8 +9,13 @@ function App() {
 
   const addValue = () => {
     //counter = counter + 1
-    //interview prospective question
-    setCounter(counter + 1)
+    setCounter(counter+1)
+    //interview prospective question increae value 4 times
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
+    
     if(counter >= 20){
       setCounter(0)
     }
