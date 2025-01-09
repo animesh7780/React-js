@@ -18,7 +18,11 @@ function App() {
           value={inputColor}
           onChange={(e) => setInputColor(e.target.value)}
         />
-        <button onClick={handleClick}>Submit</button>
+        <button 
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={handleClick}>
+          Submit
+        </button>
       </div>
     </>
   );
