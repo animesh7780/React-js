@@ -1,23 +1,27 @@
-import { useState} from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-
-  const click = "click me"
-
-  // const[click, setClick] = useState("Click me")
-  const [color, setColor] = useState("red")
+  const [color, setColor] = useState(''); 
+  const [inputColor, setInputColor] = useState(''); 
 
   const handleClick = () => {
-    setColor("green")
-  }
+    setColor(inputColor); 
+  };
 
   return (
     <>
-      <div style={{backgroundColor: color}}></div> 
-      <button onClick={handleClick}>{click}</button>
+      <div className="w-full h-screen duration-200" style={{ backgroundColor: color }}>
+        <input
+          type="text"
+          placeholder="Enter color"
+          value={inputColor}
+          onChange={(e) => setInputColor(e.target.value)}
+        />
+        <button onClick={handleClick}>Submit</button>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
