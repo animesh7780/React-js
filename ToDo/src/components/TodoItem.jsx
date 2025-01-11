@@ -6,14 +6,10 @@ function TodoItem({ todo }) {
     const [todoMsg, setTodoMsg] = useState(todo.todo);  
     const { updateTodo, deleteTodo, toggleCompleted } = useToDo();
 
-    const editTodo = useCallback(() => {
-        try {
-            updateTodo(todo.id, { ...todo, todo: todoMsg });
-            setIsTodoEditable(false);
-        } catch (error) {
-            console.error("Failed to update todo:", error);
-        }
-    }, [todo, todoMsg, updateTodo]);
+    const editTodo = () => {
+        updateTodo(todo.id, { ...todo, todo: todoMsg });
+        setIsTodoEditable(false);
+    }
 
     const completed = useCallback(() => {
         try {
